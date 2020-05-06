@@ -3,7 +3,7 @@ import React from "react";
 import TarjetaServicios from "../tarjetaServicio/index";
 import Modal from "../modal/index";
 
-const Tarjetas = (props) => {
+const Card = (props) => {
   const {
     namePackages,
     price,
@@ -61,4 +61,4 @@ const Tarjetas = (props) => {
   );
 };
 
-export default Tarjetas;
+export default Card;
