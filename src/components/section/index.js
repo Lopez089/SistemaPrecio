@@ -9,7 +9,7 @@ const Section = ({ price, title }) => {
         <p className="h2 text-center m-5">{title}</p>
         <div className="d-flex justify-content-around flex-wrap">
           {price.map((p) => (
-            <Tarjetas package={p} />
+            <Tarjetas key={p.id} package={p} />
           ))}
         </div>
       </div>

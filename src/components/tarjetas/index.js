@@ -22,18 +22,19 @@ const Tarjetas = (props) => {
           : "rounded shadow card m-4 pt-5 pb-5 col-md-6 col-lg-3 col-9 mb-5"
       }
     >
-      <h6 class="text-center">{namePackages}</h6>
-      <div class="d-flex justify-content-center mt-4">
-        <p class="display-2 mb-0">
+      <h6 className="text-center">{namePackages}</h6>
+      <div className="d-flex justify-content-center mt-4">
+        <p className="display-2 mb-0">
           <strong>{price}</strong>
         </p>
-        <div class="d-flex flex-column justify-content-start">
+        <div className="d-flex flex-column justify-content-start">
           <p>€</p>
         </div>
       </div>
-      <div class="container mt-3">
+      <div className="container mt-3">
         {Service.map((s) => (
           <TarjetaServicios
+            key={s.idService}
             data={s}
             price={priceHour}
             id={id}
@@ -50,10 +51,10 @@ const Tarjetas = (props) => {
         data-toggle="modal"
         data-target="#exampleModal"
         type="button"
-        class="rounded shadow btn btn-primary mt-4"
+        className="rounded shadow btn btn-primary mt-4"
       >
         {button.text}
-        <i class="fas fa-angle-right ml-2"></i>
+        <i className="fas fa-angle-right ml-2"></i>
       </button>
       <Modal />
     </article>
