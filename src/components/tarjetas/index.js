@@ -3,7 +3,7 @@ import React from "react";
 import TarjetaServicios from "../tarjetaServicio/index";
 import Modal from "../modal/index";
 
-const Tarjetas = props => {
+const Tarjetas = (props) => {
   const {
     namePackages,
     price,
@@ -11,7 +11,7 @@ const Tarjetas = props => {
     Service,
     info,
     button,
-    id
+    id,
   } = props.package;
 
   return (
@@ -32,7 +32,7 @@ const Tarjetas = props => {
         </div>
       </div>
       <div class="container mt-3">
-        {Service.map(s => (
+        {Service.map((s) => (
           <TarjetaServicios
             data={s}
             price={priceHour}
