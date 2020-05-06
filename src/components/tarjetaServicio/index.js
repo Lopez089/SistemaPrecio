@@ -1,13 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 import "./styles.css";
-const TarjetaServicios = props => {
+const TarjetaServicios = (props) => {
   const { nameService, count, idService } = props.data;
 
   return (
     <React.Fragment>
-      <div class="d-flex justify-content-between align-items-center border-bottom pb-2 pt-2">
-        <p class="w-50  mb-0 ">{nameService}</p>
+      <div className="d-flex justify-content-between align-items-center border-bottom pb-2 pt-2">
+        <p className="w-50  mb-0 ">{nameService}</p>
         <div className="w-50 d-flex flex-column">
           <div className=" justify-content-around d-flex flex-row align-items-center">
             <p
@@ -51,13 +51,13 @@ const TarjetaServicios = props => {
   );
 };
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   Aumentar(id, idService, count) {
     dispatch({
       type: "AUMENTAR",
       id,
       idService,
-      count
+      count,
     });
   },
   Reducir(id, idService, count, priceService, price) {
@@ -67,9 +67,9 @@ const mapDispatchToProps = dispatch => ({
       idService,
       count,
       priceService,
-      priceHour: price
+      priceHour: price,
     });
-  }
+  },
 });
 
 export default connect(null, mapDispatchToProps)(TarjetaServicios);
