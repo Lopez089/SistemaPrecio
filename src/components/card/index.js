@@ -12,7 +12,7 @@ const Card = (props) => {
     info,
     button,
     id,
-  } = props.package;
+  } = props.servicePackage;
 
   return (
     <article

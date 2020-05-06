@@ -1,17 +1,21 @@
 import React from "react";
 import { connect } from "react-redux";
 import Card from "../card/index";
-const WrapCard = ({ price }) => {
+
+const WrapCards = (props) => {
+  const { servicesPackages } = props;
+
   return (
-    <React.Fragment>
-      {price.map((p) => (
-        <Card key={p.id} package={p} />
+    <>
+      {servicesPackages.map((servicePackage) => (
+        <Card key={servicePackage.id} servicePackage={servicePackage} />
       ))}
-    </React.Fragment>
+    </>
   );
 };
+
 const mapStateToProps = (state) => ({
-  price: state.servicePackages,
+  servicesPackages: state.servicePackages,
 });
 
-export default connect(mapStateToProps, null)(WrapCard);
+export default connect(mapStateToProps, null)(WrapCards);

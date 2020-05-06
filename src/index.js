@@ -3,15 +3,14 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import store from "./store/store";
 import Section from "./components/section/index";
-import WrapCard from "./components/wrapCard";
+import WrapCards from "./components/wrapCard";
 
 const App = () => {
   return (
     <Provider store={store}>
       <Section title="Nuestros Precios">
-        <WrapCard />
+        <WrapCards />
       </Section>
-      <Section title="contactar" />
     </Provider>
   );
 };
