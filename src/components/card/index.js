@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import TarjetaServicios from "../tarjetaServicio/index";
+import CardBodyService from "../cardBodyService/index";
 import Modal from "../modal/index";
 
 const Card = (props) => {
@@ -13,6 +13,8 @@ const Card = (props) => {
     button,
     id,
   } = props.servicePackage;
+
+  console.log(props);
 
   return (
     <article
@@ -33,7 +35,7 @@ const Card = (props) => {
       </div>
       <div className="container mt-3">
         {Service.map((s) => (
-          <TarjetaServicios
+          <CardBodyService
             key={s.idService}
             data={s}
             price={priceHour}
