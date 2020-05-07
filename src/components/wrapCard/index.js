@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Card from "../card/index";
+import WrapContentService from "../wrapContentService/index";
 
 const WrapCards = (props) => {
   const { servicesPackages } = props;
@@ -8,7 +9,11 @@ const WrapCards = (props) => {
   return (
     <>
       {servicesPackages.map((servicePackage) => (
-        <Card key={servicePackage.id} servicePackage={servicePackage} />
+        <Card key={servicePackage.id}>
+          <WrapContentService
+            servicePackage={servicePackage}
+          ></WrapContentService>
+        </Card>
       ))}
     </>
   );
