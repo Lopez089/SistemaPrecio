@@ -2,7 +2,6 @@ import React from "react";
 import CardHeaderService from "../cardHeaderService/index";
 import CardFooterService from "../cardFooterService/index";
 import mapCardBodyService from "./utils/mapCardBodyService";
-import Modal from "../modal/index";
 
 const WrapContentService = (props) => {
   const {
@@ -22,8 +21,8 @@ const WrapContentService = (props) => {
         <div className="container mt-3">
           {mapCardBodyService(Service, priceHour, id, price)}
         </div>
+
         <CardFooterService info={info} button={button} />
-        <Modal />
       </div>
     </>
   );
