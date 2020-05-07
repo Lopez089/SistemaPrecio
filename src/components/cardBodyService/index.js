@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import "./styles.css";
-const TarjetaServicios = (props) => {
+const CardBodyService = (props) => {
   const { nameService, count, idService } = props.data;
 
   return (
@@ -72,4 +72,4 @@ const mapDispatchToProps = (dispatch) => ({
   },
 });
 
-export default connect(null, mapDispatchToProps)(TarjetaServicios);
+export default connect(null, mapDispatchToProps)(CardBodyService);

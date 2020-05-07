@@ -1,25 +1,18 @@
 import React from "react";
-import Tarjetas from "../../components/tarjetas/index";
-import { connect } from "react-redux";
 
-const Section = ({ price, title }) => {
+const Section = (props) => {
+  const { title } = props;
+
   return (
-    <React.Fragment>
+    <>
       <div className="container pb-5">
         <p className="h2 text-center m-5">{title}</p>
-        <div className="d-flex justify-content-around flex-wrap">
-          {price.map((p) => (
-            <Tarjetas key={p.id} package={p} />
-          ))}
+        <div className="d-flex justify-content-around align-items-center flex-wrap">
+          {props.children}
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
-const mapStateToProps = (state) => ({
-  price: state.servicePackages,
-  title: state.Title,
-});
-
-export default connect(mapStateToProps, {})(Section);
+export default Section;

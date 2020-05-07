@@ -1,5 +1,4 @@
 const initialState = {
-  Title: "Nuestros Precios",
   servicePackages: [
     {
       id: "0",
@@ -10,27 +9,27 @@ const initialState = {
         {
           idService: "0",
           nameService: "Dj",
-          count: 1
+          count: 1,
         },
         {
           idService: "1",
           nameService: "Fografia",
-          count: 1
+          count: 1,
         },
         {
           idService: "2",
           nameService: "Animacion",
-          count: 0
-        }
+          count: 0,
+        },
       ],
       info: {
         text: "Más informacionn",
-        url: "#"
+        url: "#",
       },
       button: {
         text: "Contratar",
-        url: "#"
-      }
+        url: "#",
+      },
     },
     {
       id: "1",
@@ -41,32 +40,32 @@ const initialState = {
         {
           idService: "0",
           nameService: "Dj",
-          count: 1
+          count: 1,
         },
         {
           idService: "1",
           nameService: "Fografia",
-          count: 1
+          count: 1,
         },
         {
           idService: "2",
           nameService: "Animacion",
-          count: 1
+          count: 1,
         },
         {
           idService: "3",
           nameService: "Fotocool",
-          count: 1
-        }
+          count: 1,
+        },
       ],
       info: {
         text: "Más informacion",
-        url: "#"
+        url: "#",
       },
       button: {
         text: "Contratar",
-        url: "#"
-      }
+        url: "#",
+      },
     },
     {
       id: "2",
@@ -77,29 +76,29 @@ const initialState = {
         {
           idService: "0",
           nameService: "Dj",
-          count: 1
+          count: 1,
         },
         {
           idService: "1",
           nameService: "Fografia",
-          count: 1
+          count: 1,
         },
         {
           idService: "2",
           nameService: "Animacion",
-          count: 1
-        }
+          count: 1,
+        },
       ],
       info: {
         text: "Más informacion",
-        url: "#"
+        url: "#",
       },
       button: {
         text: "Contratar",
-        url: "#"
-      }
-    }
-  ]
+        url: "#",
+      },
+    },
+  ],
 };
 
 export default initialState;
