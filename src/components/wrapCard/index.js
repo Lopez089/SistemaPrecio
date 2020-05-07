@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import Card from "../card/index";
 import WrapContentService from "../wrapContentService/index";
-
+import Modal from "../modal/index";
 const WrapCards = (props) => {
   const { servicesPackages } = props;
 
@@ -13,6 +13,7 @@ const WrapCards = (props) => {
           <WrapContentService
             servicePackage={servicePackage}
           ></WrapContentService>
+          <Modal servicePackage={servicePackage} />
         </Card>
       ))}
     </>
