@@ -1,14 +1,14 @@
 import React from "react";
 import CardBodyService from "../../cardBodyService/index";
 
-const mapCardBodyService = (Services, priceHour, id, price) => {
-  return Services.map((service) => (
+const mapCardBodyService = (services, priceHour, id, price) => {
+  return services.map((service) => (
     <CardBodyService
       key={service.idService}
-      data={service}
-      price={priceHour}
+      service={service}
+      price={price}
       id={id}
-      priceService={price}
+      priceHour={priceHour}
     />
   ));
 };
