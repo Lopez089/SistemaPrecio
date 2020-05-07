@@ -1,8 +1,11 @@
 import React from "react";
+import HandelCountDefault from "./handleCountDefaul";
+import HandelCountMin from "./handleCountMin";
+import HandelCountMax from "./handleCountMax";
 
 const handlecount = (
-  Aumentar,
-  Reducir,
+  increase,
+  decrease,
   id,
   idService,
   count,
@@ -11,25 +14,32 @@ const handlecount = (
 ) => {
   return (
     <>
-      <p
-        className="mb-0 h5 font-weight-light text-info cursor"
-        onClick={() => Aumentar(id, idService, count)}
-      >
-        +
-      </p>
-      <p className="mb-0 h3 font-weight-normal">
-        {count}
-        <span className="h6">h</span>
-      </p>
       {count === 0 ? (
-        <p className="mb-0 h5 font-weight-light text-danger cursor">-</p>
+        <HandelCountMin
+          increase={increase}
+          id={id}
+          idService={idService}
+          count={count}
+        />
+      ) : count >= 8 ? (
+        <HandelCountMax
+          decrease={decrease}
+          id={id}
+          idService={idService}
+          count={count}
+          price={price}
+          priceHour={priceHour}
+        />
       ) : (
-        <p
-          className="mb-0 h5 font-weight-light text-danger cursor"
-          onClick={() => Reducir(id, idService, count, price, priceHour)}
-        >
-          -
-        </p>
+        <HandelCountDefault
+          increase={increase}
+          decrease={decrease}
+          id={id}
+          idService={idService}
+          count={count}
+          price={price}
+          priceHour={priceHour}
+        />
       )}
     </>
   );
