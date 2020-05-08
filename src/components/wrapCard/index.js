@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Card from "../card/index";
 import WrapContentService from "../wrapContentService/index";
 import PropTypes from "prop-types";
+import Modal from "../modal/index";
 
 const WrapCards = (props) => {
   const { servicesPackages } = props;
@@ -14,6 +15,7 @@ const WrapCards = (props) => {
           <WrapContentService
             servicePackage={servicePackage}
           ></WrapContentService>
+          <Modal servicePackage={servicePackage} />
         </Card>
       ))}
     </>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Modal = (props) => {
   return (
-    <React.Fragment>
+    <>
       <div
         className="modal fade"
         id="exampleModal"
@@ -37,6 +37,7 @@ const Modal = (props) => {
                       <i className="fas fa-hourglass-half mr-3"></i>
                       Horas
                     </th>
+
                     <th scope="col">
                       <i className="fas fa-hand-holding-usd mr-3"></i>
                       Precio/Servicio
@@ -90,7 +91,7 @@ const Modal = (props) => {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
