@@ -3,8 +3,8 @@ import Count from "../count/index";
 import PropTypes from "prop-types";
 
 const CardBodyService = (props) => {
-  const { nameService, count, idService } = props.service;
-  const { price, id, priceHour } = props;
+  const { nameService, count, idService, priceHour } = props.service;
+  const { price, id } = props;
 
   return (
     <>

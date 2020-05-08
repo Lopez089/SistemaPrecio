@@ -8,7 +8,7 @@ const WrapContentService = (props) => {
   const {
     namePackages,
     price,
-    priceHour,
+    //priceHour,
     Service,
     info,
     button,
@@ -19,7 +19,7 @@ const WrapContentService = (props) => {
       <div className="pt-5 pb-5">
         <CardHeaderService namePackages={namePackages} price={price} />
         <div className="container mt-3">
-          {mapCardBodyService(Service, priceHour, id, price)}
+          {mapCardBodyService(Service, id, price)}
         </div>
 
         <CardFooterService info={info} button={button} />
