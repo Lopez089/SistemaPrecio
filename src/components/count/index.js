@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import handleCount from "./utils/handleCount";
+import { DECREASE, INCREASE } from "../../store/constants/constants";
 import "./styles.css";
 
 const Count = (props) => {
@@ -25,7 +26,7 @@ const Count = (props) => {
 const mapDispatchToProps = (dispatch) => ({
   increase(id, idService, count) {
     dispatch({
-      type: "AUMENTAR",
+      type: INCREASE,
       id,
       idService,
       count,
@@ -33,7 +34,7 @@ const mapDispatchToProps = (dispatch) => ({
   },
   decrease(id, idService, count, priceService, price) {
     dispatch({
-      type: "REDUCIR",
+      type: DECREASE,
       id,
       idService,
       count,

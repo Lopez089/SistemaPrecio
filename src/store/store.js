@@ -3,7 +3,7 @@ import initialState from "./stateInitial";
 import { createReducer } from "@reduxjs/toolkit";
 
 const reducer = createReducer(initialState, {
-  AUMENTAR: (state, action) => {
+  INCREASE: (state, action) => {
     return {
       ...state,
       servicePackages: state.servicePackages.map((object) =>
@@ -25,7 +25,7 @@ const reducer = createReducer(initialState, {
       ),
     };
   },
-  REDUCIR: (state, action) => {
+  DECREASE: (state, action) => {
     return {
       ...state,
       servicePackages: state.servicePackages.map((object) =>
@@ -38,7 +38,7 @@ const reducer = createReducer(initialState, {
                 prop.idService === action.idService
                   ? {
                       ...prop,
-                      count: prop.count == 0 ? 0 : prop.count - 1,
+                      count: prop.count === 0 ? 0 : prop.count - 1,
                     }
                   : prop
               ),
