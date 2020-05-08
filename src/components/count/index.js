@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import handleCount from "./utils/handleCount";
-import { DECREASE, INCREASE } from "../../store/constants/constants";
+import { actionIncrease, actionDecrease } from "../../store/actions/actions";
 import "./styles.css";
 
 const Count = (props) => {
@@ -25,22 +25,10 @@ const Count = (props) => {
 };
 const mapDispatchToProps = (dispatch) => ({
   increase(id, idService, count) {
-    dispatch({
-      type: INCREASE,
-      id,
-      idService,
-      count,
-    });
+    dispatch(actionIncrease(id, idService, count));
   },
   decrease(id, idService, count, priceService, price) {
-    dispatch({
-      type: DECREASE,
-      id,
-      idService,
-      count,
-      priceService,
-      priceHour: price,
-    });
+    dispatch(actionDecrease(id, idService, count, priceService, price));
   },
 });
 
