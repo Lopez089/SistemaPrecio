@@ -23,12 +23,11 @@ const initialState = {
         },
       ],
       info: {
-        text: "Más informacionn",
-        url: "#",
+        text: "Más informacion",
+        url: "/#",
       },
       button: {
         text: "Contratar",
-        url: "#",
       },
     },
     {
@@ -60,11 +59,10 @@ const initialState = {
       ],
       info: {
         text: "Más informacion",
-        url: "#",
+        url: "/#",
       },
       button: {
         text: "Contratar",
-        url: "#",
       },
     },
     {
@@ -91,11 +89,10 @@ const initialState = {
       ],
       info: {
         text: "Más informacion",
-        url: "#",
+        url: "/#",
       },
       button: {
         text: "Contratar",
-        url: "#",
       },
     },
   ],
