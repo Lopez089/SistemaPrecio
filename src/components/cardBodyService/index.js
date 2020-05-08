@@ -1,5 +1,6 @@
 import React from "react";
 import Count from "../count/index";
+import PropTypes from "prop-types";
 
 const CardBodyService = (props) => {
   const { nameService, count, idService } = props.service;
@@ -26,6 +27,17 @@ const CardBodyService = (props) => {
       </div>
     </>
   );
+};
+
+CardBodyService.propTypes = {
+  service: PropTypes.shape({
+    nameService: PropTypes.string.isRequired,
+    count: PropTypes.number.isRequired,
+    idService: PropTypes.string.isRequired,
+  }).isRequired,
+  price: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
+  priceHour: PropTypes.number.isRequired,
 };
 
 export default CardBodyService;

@@ -1,7 +1,6 @@
 import React from "react";
 
 const Modal = (props) => {
-  const { namePackages } = props;
   return (
     <React.Fragment>
       <div
@@ -15,7 +14,7 @@ const Modal = (props) => {
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title" id="exampleModalLabel">
-                {`Servicio ${namePackages}`}
+                {`Servicio `}
               </h5>
               <button
                 type="button"
@@ -23,7 +22,7 @@ const Modal = (props) => {
                 data-dismiss="modal"
                 aria-label="Close"
               >
-                <i class="far fa-window-close"></i>
+                <i className="far fa-window-close"></i>
               </button>
             </div>
 
@@ -32,19 +31,19 @@ const Modal = (props) => {
                 <thead className="text-muted h6">
                   <tr>
                     <th scope="col">
-                      <i class="fas fa-hand-holding mr-3"></i> Servicio
+                      <i className="fas fa-hand-holding mr-3"></i> Servicio
                     </th>
                     <th scope="col">
-                      <i class="fas fa-hourglass-half mr-3"></i>
+                      <i className="fas fa-hourglass-half mr-3"></i>
                       Horas
                     </th>
                     <th scope="col">
-                      <i class="fas fa-hand-holding-usd mr-3"></i>
+                      <i className="fas fa-hand-holding-usd mr-3"></i>
                       Precio/Servicio
                     </th>
                   </tr>
                 </thead>
-                <tbody clasName="table-hover">
+                <tbody className="table-hover">
                   <tr>
                     <th scope="row">Dj</th>
                     <td>8</td>
@@ -65,7 +64,7 @@ const Modal = (props) => {
                       className="text-center
 					"
                       scope="row"
-                      colspan="2"
+                      colSpan="2"
                     >
                       Total
                     </th>

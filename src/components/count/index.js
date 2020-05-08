@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import handleCount from "./utils/handleCount";
 import "./styles.css";
@@ -41,4 +42,15 @@ const mapDispatchToProps = (dispatch) => ({
     });
   },
 });
+
+Count.propTypes = {
+  increase: PropTypes.func.isRequired,
+  decrease: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  idService: PropTypes.string.isRequired,
+  count: PropTypes.number.isRequired,
+  price: PropTypes.number.isRequired,
+  priceHour: PropTypes.number.isRequired,
+};
+
 export default connect(null, mapDispatchToProps)(Count);

@@ -1,7 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import CardHeaderService from "../cardHeaderService/index";
 import CardFooterService from "../cardFooterService/index";
 import mapCardBodyService from "./utils/mapCardBodyService";
+import Modal from "../modal/index";
 
 const WrapContentService = (props) => {
   const {
@@ -13,7 +15,6 @@ const WrapContentService = (props) => {
     button,
     id,
   } = props.servicePackage;
-
   return (
     <>
       <div className="pt-5 pb-5">
@@ -21,11 +22,33 @@ const WrapContentService = (props) => {
         <div className="container mt-3">
           {mapCardBodyService(Service, priceHour, id, price)}
         </div>
-
         <CardFooterService info={info} button={button} />
+        <Modal namePackages={namePackages} />
       </div>
     </>
   );
 };
 
+WrapContentService.propTypes = {
+  servicePackage: PropTypes.shape({
+    Service: PropTypes.arrayOf(
+      PropTypes.shape({
+        idService: PropTypes.string.isRequired,
+        nameService: PropTypes.string.isRequired,
+        count: PropTypes.number.isRequired,
+      })
+    ).isRequired,
+    button: PropTypes.shape({
+      text: PropTypes.string.isRequired,
+    }).isRequired,
+    id: PropTypes.string.isRequired,
+    info: PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    }).isRequired,
+    namePackages: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    priceHour: PropTypes.number.isRequired,
+  }).isRequired,
+};
 export default WrapContentService;

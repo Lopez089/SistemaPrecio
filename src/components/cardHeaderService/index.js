@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const CardHeaderService = (props) => {
   const { namePackages, price } = props;
@@ -16,6 +17,11 @@ const CardHeaderService = (props) => {
       </div>
     </>
   );
+};
+
+CardHeaderService.propTypes = {
+  namePackages: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
 };
 
 export default CardHeaderService;

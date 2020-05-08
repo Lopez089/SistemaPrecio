@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const CardFooterService = (props) => {
   const { info, button } = props;
@@ -20,6 +21,18 @@ const CardFooterService = (props) => {
       </button>
     </>
   );
+};
+
+CardFooterService.propTypes = {
+  info: PropTypes.shape(
+    {
+      url: PropTypes.string.isRequired,
+      info: PropTypes.string.isRequired,
+    }.isrequired
+  ),
+  button: PropTypes.shape({
+    text: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default CardFooterService;
