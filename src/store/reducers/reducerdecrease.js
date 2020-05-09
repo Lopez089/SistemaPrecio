@@ -1,22 +1,26 @@
 const reducerdecrease = (state, action) => {
   return {
     ...state,
-    servicePackages: state.servicePackages.map((object) =>
-      object.id === action.id
+    servicePackages: state.servicePackages.map((servicePackage) =>
+      servicePackage.id === action.id
         ? {
-            ...object,
+            ...servicePackage,
             namePackages: "PERSONALIZED",
-            price: action.priceService - action.priceHour,
-            Service: object.Service.map((prop) =>
-              prop.idService === action.idService
+            Service: servicePackage.Service.map((service) =>
+              service.idService === action.idService
                 ? {
-                    ...prop,
-                    count: prop.count === 0 ? 0 : prop.count - 1,
+                    ...service,
+                    count: service.count - 1,
+                    priceTotal: (service.count - 1) * service.priceHour,
                   }
-                : prop
+                : service
+            ),
+            price: servicePackage.Service.reduce(
+              (acomulado, actual) => acomulado + actual.priceTotal,
+              -action.priceHour
             ),
           }
-        : object
+        : servicePackage
     ),
   };
 };
