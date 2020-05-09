@@ -3,28 +3,28 @@ const initialState = {
     {
       id: "0",
       namePackages: "BASIC",
-      price: 90,
+      price: 0,
       Service: [
         {
           idService: "0",
           nameService: "Dj",
-          count: 1,
+          count: 0,
           priceHour: 20,
-          priceTotal: 20,
+          priceTotal: 0,
         },
         {
           idService: "1",
           nameService: "Fografia",
-          count: 1,
+          count: 0,
           priceHour: 50,
-          priceTotal: 50,
+          priceTotal: 0,
         },
         {
           idService: "2",
           nameService: "Animacion",
           count: 0,
           priceHour: 20,
-          priceTotal: 20,
+          priceTotal: 0,
         },
       ],
       info: {

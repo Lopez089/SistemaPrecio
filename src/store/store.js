@@ -1,8 +1,14 @@
-import { createStore } from "redux";
+import { createStore, combineReducers } from "redux";
 import initialState from "./stateInitial";
 import { createReducer } from "@reduxjs/toolkit";
 import reducerincrease from "./reducers/reducerincrease";
 import reducerdecrease from "./reducers/reducerdecrease";
+import reducerPriceTotal from "./reducers/reducerPriceTotal";
+
+const reducersCombiIncrease = combineReducers({
+  reducerincrease,
+  reducerPriceTotal,
+});
 
 const reducer = createReducer(initialState, {
   INCREASE: (state, action) => {
