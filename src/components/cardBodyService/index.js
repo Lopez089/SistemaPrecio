@@ -34,10 +34,10 @@ CardBodyService.propTypes = {
     nameService: PropTypes.string.isRequired,
     count: PropTypes.number.isRequired,
     idService: PropTypes.string.isRequired,
+    priceHour: PropTypes.number.isRequired,
   }).isRequired,
   price: PropTypes.number.isRequired,
   id: PropTypes.string.isRequired,
-  priceHour: PropTypes.number.isRequired,
 };
 
 export default CardBodyService;

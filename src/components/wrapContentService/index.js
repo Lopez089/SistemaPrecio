@@ -8,7 +8,6 @@ const WrapContentService = (props) => {
   const {
     namePackages,
     price,
-    //priceHour,
     Service,
     info,
     button,
@@ -35,6 +34,7 @@ WrapContentService.propTypes = {
         idService: PropTypes.string.isRequired,
         nameService: PropTypes.string.isRequired,
         count: PropTypes.number.isRequired,
+        priceHour: PropTypes.number.isRequired,
       })
     ).isRequired,
     button: PropTypes.shape({
@@ -47,7 +47,6 @@ WrapContentService.propTypes = {
     }).isRequired,
     namePackages: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    priceHour: PropTypes.number.isRequired,
   }).isRequired,
 };
 export default WrapContentService;
