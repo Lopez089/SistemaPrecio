@@ -20,6 +20,7 @@ const handlecount = (
           id={id}
           idService={idService}
           count={count}
+          priceHour={priceHour}
         />
       ) : count >= 8 ? (
         <HandelCountMax

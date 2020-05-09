@@ -6,11 +6,7 @@ const reducerincrease = (state, action) => {
         ? {
             ...servicepackage,
             namePackages: "PERSONALIZED",
-            price: servicepackage.Service.reduce(
-              (acumulador, valorActual, index, array) =>
-                acumulador + valorActual.priceTotal,
-              0
-            ),
+            ...servicepackage,
             Service: servicepackage.Service.map((service) =>
               service.idService === action.idService
                 ? {
@@ -19,6 +15,10 @@ const reducerincrease = (state, action) => {
                     priceTotal: (service.count + 1) * service.priceHour,
                   }
                 : service
+            ),
+            price: servicepackage.Service.reduce(
+              (acomulado, actual) => acomulado + actual.priceTotal,
+              action.priceHour
             ),
           }
         : servicepackage

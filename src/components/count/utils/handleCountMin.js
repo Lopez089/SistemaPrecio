@@ -1,12 +1,12 @@
 import React from "react";
 
 const HandelCountMin = (props) => {
-  const { increase, id, idService, count } = props;
+  const { increase, id, idService, count, priceHour } = props;
   return (
     <>
       <p
         className="mb-0 h5 font-weight-light text-info pointer"
-        onClick={() => increase(id, idService, count)}
+        onClick={() => increase(id, idService, count, priceHour)}
       >
         +
       </p>

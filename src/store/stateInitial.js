@@ -3,7 +3,7 @@ const initialState = {
     {
       id: "0",
       namePackages: "BASIC",
-      price: 0,
+
       Service: [
         {
           idService: "0",
@@ -27,6 +27,7 @@ const initialState = {
           priceTotal: 0,
         },
       ],
+      price: 0,
       info: {
         text: "Más informacion",
         url: "/#",
@@ -38,7 +39,7 @@ const initialState = {
     {
       id: "1",
       namePackages: "PREMIUM",
-      price: 195,
+      price: 250,
       Service: [
         {
           idService: "0",
@@ -80,7 +81,7 @@ const initialState = {
     {
       id: "2",
       namePackages: "ESTANDAR",
-      price: 145,
+      price: 150,
       Service: [
         {
           idService: "0",
