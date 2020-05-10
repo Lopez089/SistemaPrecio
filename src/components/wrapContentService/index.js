@@ -8,7 +8,6 @@ const WrapContentService = (props) => {
   const {
     namePackages,
     price,
-    priceHour,
     Service,
     info,
     button,
@@ -19,7 +18,7 @@ const WrapContentService = (props) => {
       <div className="pt-5 pb-5">
         <CardHeaderService namePackages={namePackages} price={price} />
         <div className="container mt-3">
-          {mapCardBodyService(Service, priceHour, id, price)}
+          {mapCardBodyService(Service, id, price)}
         </div>
 
         <CardFooterService info={info} button={button} />
@@ -35,6 +34,7 @@ WrapContentService.propTypes = {
         idService: PropTypes.string.isRequired,
         nameService: PropTypes.string.isRequired,
         count: PropTypes.number.isRequired,
+        priceHour: PropTypes.number.isRequired,
       })
     ).isRequired,
     button: PropTypes.shape({
@@ -47,7 +47,6 @@ WrapContentService.propTypes = {
     }).isRequired,
     namePackages: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    priceHour: PropTypes.number.isRequired,
   }).isRequired,
 };
 export default WrapContentService;

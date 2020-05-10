@@ -24,8 +24,8 @@ const Count = (props) => {
   );
 };
 const mapDispatchToProps = (dispatch) => ({
-  increase(id, idService, count) {
-    dispatch(actionIncrease(id, idService, count));
+  increase(id, idService, count, priceHour) {
+    dispatch(actionIncrease(id, idService, count, priceHour));
   },
   decrease(id, idService, count, priceService, price) {
     dispatch(actionDecrease(id, idService, count, priceService, price));

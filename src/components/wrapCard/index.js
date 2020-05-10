@@ -34,6 +34,7 @@ WrapCards.propTypes = {
           idService: PropTypes.string.isRequired,
           nameService: PropTypes.string.isRequired,
           count: PropTypes.number.isRequired,
+          priceHour: PropTypes.number.isRequired,
         })
       ).isRequired,
       button: PropTypes.shape({
@@ -46,7 +47,6 @@ WrapCards.propTypes = {
       }).isRequired,
       namePackages: PropTypes.string.isRequired,
       price: PropTypes.number.isRequired,
-      priceHour: PropTypes.number.isRequired,
     })
   ).isRequired,
 };

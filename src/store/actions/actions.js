@@ -1,11 +1,12 @@
 import { DECREASE, INCREASE } from "../../store/constants/constants";
 
-export const actionIncrease = (id, idService, count) => {
+export const actionIncrease = (id, idService, count, priceHour) => {
   return {
     type: INCREASE,
     id,
     idService,
     count,
+    priceHour,
   };
 };
 
