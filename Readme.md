@@ -1,6 +1,8 @@
 # Sistema de precio
 
-Una interfaz de un sistema de precios, donde el usuario puede seleccionar la cantidad de horas que desea de cada servicio y te calcula el precio final del servicio.
+Una interfaz de un sistema de precios, donde el usuario puede seleccionar la cantidad de horas que desea de cada servicio y te calcula el precio final del servicio. [Demo](https://sistemaprecios.firebaseapp.com/)
+
+![alt](./other/demo.gif)
 
 ## Comenzando 🚀
 
