@@ -6,14 +6,15 @@
   "version": "2.0.0",
   "private": true,
   "dependencies": {
-    "redux": "^4.0.5",
-    "react-scripts": "^3.4.0",
+    "@reduxjs/toolkit": "^1.2.2",
+    "@welldone-software/why-did-you-render": "^5.0.0-alpha.2",
+    "fsevents": "^2.1.2",
+    "jquery": "^3.4.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
-    "@reduxjs/toolkit": "^1.2.2",
-    "fsevents": "^2.1.2",
-    "jquery": "^3.4.1"
+    "react-scripts": "^3.4.0",
+    "redux": "^4.0.5"
   },
   "scripts": {
     "start": "react-scripts start",

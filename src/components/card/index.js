@@ -12,5 +12,5 @@ const Card = (props) => {
 Card.propTypes = {
   props: PropTypes.elementType,
 };
-
+Card.whyDidYouRender = true;
 export default Card;
